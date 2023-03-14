@@ -158,6 +158,8 @@ class Cont:
     def creditare_cont (self, suma):
         self.sold = self.sold + suma
 
+
+
 cont = Cont (23456789, 'Lavinia Pop', 5000)
 cont.afisare_sold()
 print(cont.debitare_cont(456))
