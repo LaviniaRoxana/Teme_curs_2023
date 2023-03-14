@@ -105,7 +105,7 @@ Funcție fără return, primește un string și printează pe ecran:
 #          if litera.isupper():
 #               cate_litere_mari += 1 #daca litera este mare, incrementam la litere mari
 #          elif litera.islower():
-#               cate_litere_mici += 1 #daca litera este mica, inrementam la ltere mici
+#               cate_litere_mici += 1 #daca litera este mica, incrementam la ltere mici
 #
 #     print(f'Textul a fost{text}')
 #     print(f"Numarul de litere mici este {cate_litere_mici}")

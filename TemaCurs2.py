@@ -1,5 +1,9 @@
 # Exercitiul 1
 
+"""
+Explica cu cuvintele tale in cadrul unui comentariu cum functioneaza un if else.
+"""
+
 # If else este folosit atunci cand doresti codul sa se execute in anumite conditii; se bifurca codul in functie de rezultat.
 
 
@@ -125,8 +129,8 @@ c. Peste 7 => C
 d. Peste 6 => D
 e. Peste 4 => E
 f. 4 sau sub => F
-
 """
+
 nota = float(input('introduceti nota'))
 if nota > 9:
     print('A')
