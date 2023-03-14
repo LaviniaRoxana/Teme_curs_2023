@@ -1,1 +1,0 @@
-#tema de la curs 7
