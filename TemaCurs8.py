@@ -34,19 +34,17 @@ cu (xpath)[1]
 ● 1 funcție ca și cea de la clasă prin care să pot alege eu prin parametru cu
 ce element vreau să interacționez.
 """
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
+import time #pentru a putea pune pauze inca cazul nostru
 chrome_options = Options()
-chrome_options.add_experimental_option("detach", True)
+#chrome_options.add_experimental_option("detach", True) -- asta tine pagina deschisa/ sau pui sleep cu time
 
 chrome = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
-
-
 
 """
 ID
@@ -85,6 +83,9 @@ chrome.find_element(By.PARTIAL_LINK_TEXT, "File").click()
 """
 Name
 """
+
+time.sleep(10)
+
 chrome.get("https://phptravels.net/")
 chrome.find_element(By.NAME, "to").send_keys('Hawai')
 chrome.find_element(By.NAME, "from").send_keys('Romania')
@@ -108,6 +109,7 @@ Class name
 # chrome.find_elements(By.CLASS_NAME, "form-control")[1].send_keys("POP")
 #
 # chrome.find_elements(By.CLASS_NAME, "form-control")[2].send_keys("Asistent")
+
 
 """
 CSS
@@ -157,9 +159,8 @@ chrome.find_element(By.XPATH, '//a[text()="Submit"]').click()
 #parent si sibling
 chrome.find_element(By.XPATH, '//label[text()="First name"]/parent::strong/following-sibling::input/preceding-sibling::strong')
 
+
 # cu ajutorul unei functii cand avem foarte multe elemente de acelasi tip si vrem sa parametrizam selectorul
-
-
 
 def formy_input(placeholder_text, input_value):
     input = chrome.find_element(By.XPATH, f'//input[@placeholder="{placeholder_text}"]')
