@@ -161,7 +161,7 @@ class Login(TestCase):
         self.chrome.find_element(By.XPATH, "//button").click()
         mesaj_eroare = self.chrome.find_element(By.ID, "flash")
         mesaj_eroare.click()
-        assert mesaj_eroare.is_displayed() == False, f"Eroarea login este inca afisata"
+        assert mesaj_eroare.is_displayed() == True, f"Eroarea a disparut"
 
 # test 9 - Ia ca o listă toate //label
        # - Verifică textul ca textul de pe ele să fie cel așteptat (Username și
